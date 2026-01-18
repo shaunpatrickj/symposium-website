@@ -290,3 +290,4 @@ For issues or questions:
 - [Supabase Documentation](https://supabase.com/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Resend Documentation](https://resend.com/docs)
+# symposium-website
