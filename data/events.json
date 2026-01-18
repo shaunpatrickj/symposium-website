@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "id": "paper-presentation",
+      "name": "Paper Presentation",
+      "slug": "paper-presentation",
+      "description": "Showcase your research and innovative ideas through paper presentations. This event provides a platform for students to present their technical papers and engage in academic discourse.",
+      "longDescription": "The Paper Presentation event is designed to encourage students to conduct research, analyze topics, and present their findings. Participants will have the opportunity to present their papers to a panel of judges and receive valuable feedback. Topics can range from emerging technologies to innovative solutions for real-world problems.",
+      "rules": [
+        "Maximum 3 members per team",
+        "Paper must be original and unpublished",
+        "Presentation time: 10 minutes + 5 minutes Q&A",
+        "Submit abstract before the deadline"
+      ],
+      "prize": "Cash prizes and certificates for top 3 presentations"
+    },
+    {
+      "id": "el-casino",
+      "name": "El Casino",
+      "slug": "el-casino",
+      "description": "Test your technical knowledge and quick thinking in this exciting quiz competition. Fast-paced questions covering various domains of electronics and technology.",
+      "longDescription": "El Casino is a thrilling technical quiz competition that challenges participants' knowledge across multiple domains including electronics, programming, and general technology. Teams compete in multiple rounds with increasing difficulty levels. Quick thinking and teamwork are essential to succeed.",
+      "rules": [
+        "Team of 2-3 members",
+        "Multiple rounds with elimination",
+        "No external resources allowed",
+        "Decision of judges is final"
+      ],
+      "prize": "Trophy and certificates for winning team"
+    },
+    {
+      "id": "electro-quest",
+      "name": "Electro Quest",
+      "slug": "electro-quest",
+      "description": "An electrifying circuit design and implementation challenge. Design and build circuits to solve given problems within the time limit.",
+      "longDescription": "Electro Quest challenges participants to design and implement electronic circuits to solve real-world problems. Participants will receive problem statements and must design, simulate, and implement working circuits. This event tests both theoretical knowledge and practical skills in electronics.",
+      "rules": [
+        "Individual or team of 2",
+        "All components will be provided",
+        "Time limit: 3 hours",
+        "Judging based on functionality and design"
+      ],
+      "prize": "Electronics components kit and certificates"
+    },
+    {
+      "id": "circuit-debugging",
+      "name": "Circuit Debugging",
+      "slug": "circuit-debugging",
+      "description": "Debug faulty circuits and identify issues. Test your troubleshooting skills and understanding of electronic circuits.",
+      "longDescription": "Circuit Debugging is a hands-on event where participants are presented with faulty circuits and must identify and fix the issues. This event tests participants' ability to troubleshoot, use multimeters and oscilloscopes, and understand circuit behavior. Multiple circuits with varying difficulty levels will be provided.",
+      "rules": [
+        "Individual participation only",
+        "Tools and equipment will be provided",
+        "Time limit per circuit: 30 minutes",
+        "Points based on correctness and time taken"
+      ],
+      "prize": "Digital multimeter and certificates"
+    },
+    {
+      "id": "locked-in",
+      "name": "Locked In",
+      "slug": "locked-in",
+      "description": "An escape room style technical puzzle challenge. Solve technical riddles, decode circuits, and unlock the secrets to escape.",
+      "longDescription": "Locked In is an innovative escape room-style event with a technical twist. Teams must solve a series of technical puzzles, decode circuits, analyze codes, and work together to unlock the final challenge. This event combines logic, technical knowledge, and teamwork in an exciting format.",
+      "rules": [
+        "Team of 3-4 members",
+        "Time limit: 2 hours",
+        "Clues available at strategic points",
+        "First team to complete wins"
+      ],
+      "prize": "Gift vouchers and certificates for all participants"
+    }
+  ]
+}
