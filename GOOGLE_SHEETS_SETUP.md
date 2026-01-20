@@ -58,7 +58,7 @@ When someone registers through your website, their information will automaticall
 3. Fill in the details:
    - **Service account name**: `symposium-sheets` (or any name)
    - **Service account ID**: Will auto-generate
-   - **Description**: "Service account for symposium registrations"
+   - **Description**: "Service account for symposium registration"
 4. Click **"Create and Continue"**
 5. Skip optional steps and click **"Done"**
 

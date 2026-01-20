@@ -1,8 +1,9 @@
-import dotenv from 'dotenv';
 import path from 'path';
+import { addRegistrationToSheet } from '../lib/googleSheets';
 
 // Load environment variables from .env.local
-dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
+// dotenv removed, running with --env-file=.env.local
+// dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
 async function testSheetConnection() {
     console.log('Testing Google Sheets connection...');

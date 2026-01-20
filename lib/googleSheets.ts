@@ -23,16 +23,24 @@ export async function addRegistrationToSheet(data: RegistrationData) {
     }
 
     // Initialize Google Auth
-    let formattedPrivateKey = privateKey.replace(/\\n/g, '\n')
-    
-    // Remove quotes if they exist at the beginning and end
+    let formattedPrivateKey = privateKey
+
+    // 1. Unescape escaped newlines (common in .env files)
+    formattedPrivateKey = formattedPrivateKey.replace(/\\n/g, '\n')
+
+    // 2. Strip surrounding quotes if present (double cleanup to be safe)
     if (formattedPrivateKey.startsWith('"') && formattedPrivateKey.endsWith('"')) {
       formattedPrivateKey = formattedPrivateKey.slice(1, -1)
     }
-    
-    // Ensure the private key starts and ends correctly
+
+    // 3. Trim extra whitespace
+    formattedPrivateKey = formattedPrivateKey.trim()
+
+    // 4. Ensure proper PEM headers (sometimes people copy just the middle)
     if (!formattedPrivateKey.includes('BEGIN PRIVATE KEY')) {
       console.error('❌ Google Sheets: Invalid private key format (missing BEGIN PRIVATE KEY)')
+      // Debug log (redacted)
+      console.error('Key start:', formattedPrivateKey.substring(0, 20))
       return
     }
 
