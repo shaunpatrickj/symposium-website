@@ -40,4 +40,29 @@ body {
   .glow-gold {
     box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
   }
+
+  .bg-grid-tech {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, rgba(251, 191, 36, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(251, 191, 36, 0.05) 1px, transparent 1px);
+    animation: move-grid 20s linear infinite;
+  }
+
+  @keyframes move-grid {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+  }
+
+  .tech-spin {
+    animation: spin 10s linear infinite;
+  }
+
+  .tech-spin-reverse {
+    animation: spin 15s linear infinite reverse;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
 }

@@ -8,6 +8,12 @@ export interface Event {
   longDescription: string
   rules: string[]
   prize: string
+  date?: string
+  venue?: string
+  startTime?: string
+  teamSize?: string
+  entryFee?: string
+  timeline?: { time: string; activity: string }[]
 }
 
 export function getEvents(): Event[] {

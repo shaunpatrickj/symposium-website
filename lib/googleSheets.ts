@@ -18,15 +18,28 @@ export async function addRegistrationToSheet(data: RegistrationData) {
     const privateKey = process.env.GOOGLE_PRIVATE_KEY
 
     if (!spreadsheetId || !serviceAccountEmail || !privateKey) {
-      console.warn('Google Sheets not configured. Missing environment variables.')
+      console.log('ℹ️ Google Sheets not configured. Skipping (optional feature).')
       return
     }
 
     // Initialize Google Auth
+    let formattedPrivateKey = privateKey.replace(/\\n/g, '\n')
+    
+    // Remove quotes if they exist at the beginning and end
+    if (formattedPrivateKey.startsWith('"') && formattedPrivateKey.endsWith('"')) {
+      formattedPrivateKey = formattedPrivateKey.slice(1, -1)
+    }
+    
+    // Ensure the private key starts and ends correctly
+    if (!formattedPrivateKey.includes('BEGIN PRIVATE KEY')) {
+      console.error('❌ Google Sheets: Invalid private key format (missing BEGIN PRIVATE KEY)')
+      return
+    }
+
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: serviceAccountEmail,
-        private_key: privateKey.replace(/\\n/g, '\n'),
+        private_key: formattedPrivateKey,
       },
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     })
@@ -67,12 +80,16 @@ export async function addRegistrationToSheet(data: RegistrationData) {
       },
     })
 
-    console.log('Registration added to Google Sheet successfully')
+    console.log('✅ Registration added to Google Sheet successfully')
   } catch (error: any) {
-    console.error('Error adding to Google Sheet:', error)
-    // Don't throw - we don't want to fail registration if sheet fails
+    console.error('⚠️ Google Sheets error (non-critical - registration still successful):')
     if (error.message) {
-      console.error('Error details:', error.message)
+      console.error('Error message:', error.message)
     }
+    if (error.code) {
+      console.error('Error code:', error.code)
+    }
+    // Don't throw - we don't want to fail registration if sheet fails
+    console.log('ℹ️ Tip: Google Sheets is optional. Remove Google Sheets variables from .env.local to disable.')
   }
 }

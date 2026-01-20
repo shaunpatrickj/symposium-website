@@ -10,14 +10,17 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.5",
+    "emailjs": "^5.0.0",
     "googleapis": "^170.1.0",
     "next": "^14.0.4",
+    "nodemailer": "^7.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "resend": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
+    "@types/nodemailer": "^7.0.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
