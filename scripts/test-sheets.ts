@@ -1,5 +1,5 @@
 import path from 'path';
-import { addRegistrationToSheet } from '../lib/googleSheets';
+import { addRegistrationToSheet } from '../lib/googleSheets.ts';
 
 // Load environment variables from .env.local
 // dotenv removed, running with --env-file=.env.local
