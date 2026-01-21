@@ -24,7 +24,7 @@ export default function MapPage() {
                             EVENT LOCATION
                         </h1>
                         <p className="text-gray-400 text-lg md:text-xl font-mono">
-              // R.M.K. ENGINEERING COLLEGE_
+                            {"// R.M.K. ENGINEERING COLLEGE_"}
                         </p>
                     </div>
 

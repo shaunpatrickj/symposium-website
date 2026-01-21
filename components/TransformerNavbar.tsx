@@ -74,7 +74,7 @@ export default function TransformerNavbar() {
                         className="group relative px-6 py-2 font-tech font-bold text-black bg-primary clip-button-mech hover:bg-white transition-colors"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            DEPLOY <span className="text-xs opacity-70">/// REGISTER</span>
+                            DEPLOY <span className="text-xs opacity-70">{"/// REGISTER"}</span>
                         </span>
                     </Link>
                 </div>

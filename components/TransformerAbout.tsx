@@ -47,7 +47,7 @@ export default function TransformerAbout() {
                                 <span className="text-xs font-mono text-primary/50">SECURE_TRANSMISSION</span>
                             </h3>
                             <p className="text-xl text-gray-300 font-sans leading-relaxed border-t border-gray-800 pt-6">
-                                "To Mould the Young Professionals into Creative and Successful Electrical Engineers to meet with the Global Technological Challenges"
+                                &quot;To Mould the Young Professionals into Creative and Successful Electrical Engineers to meet with the Global Technological Challenges&quot;
                             </p>
                             {/* Decoding Effect Lines */}
                             <div className="absolute bottom-4 right-4 flex gap-1">

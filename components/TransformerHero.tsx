@@ -37,10 +37,10 @@ export default function TransformerHero() {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 >
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 tracking-tighter relative z-10">
-                        BLITZKRIEG'26
+                        BLITZKRIEG&apos;26
                     </h1>
                     <h1 className="absolute top-0 left-0 w-full text-6xl md:text-8xl lg:text-9xl font-bold font-tech text-primary opacity-20 blur-sm animate-pulse z-0 tracking-tighter">
-                        BLITZKRIEG'26
+                        BLITZKRIEG&apos;26
                     </h1>
                     <div className="absolute -inset-10 border border-primary/10 rounded-full animate-spin-slow opacity-20" />
                 </motion.div>
