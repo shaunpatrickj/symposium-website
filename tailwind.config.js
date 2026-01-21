@@ -25,6 +25,13 @@ module.exports = {
           500: '#06b6d4',
           900: '#164e63',
         },
+        primary: {
+          DEFAULT: '#fbbf24',
+          dark: '#f59e0b',
+        },
+        accent: '#22d3ee',
+        'bg-dark': '#050505',
+        'bg-darker': '#020202',
       },
       fontFamily: {
         serif: ['Ethnocentric', 'Georgia', 'serif'],

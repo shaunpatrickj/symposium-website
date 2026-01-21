@@ -21,7 +21,7 @@ export default function TransformerHero() {
     return (
         <section ref={containerRef} className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden">
             {/* Background Layers */}
-            <div className="absolute inset-0 z-0 bg-bg-darker">
+            <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-grid-cyber opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-darker" />
             </div>

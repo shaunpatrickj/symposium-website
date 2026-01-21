@@ -30,7 +30,7 @@ export default function TransformerNavbar() {
             transition={{ type: 'spring', stiffness: 50, damping: 20 }}
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                scrolled ? "py-2 bg-bg-darker/90 backdrop-blur-md border-b border-primary/20" : "py-6 bg-transparent"
+                scrolled ? "py-2 bg-bg-darker/90 backdrop-blur-md border-b border-primary/20" : "py-4 bg-bg-darker/80 backdrop-blur-sm border-b border-white/5"
             )}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
@@ -79,9 +79,17 @@ export default function TransformerNavbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Menu Toggle (Simplified for now) */}
-                <div className="md:hidden text-primary font-tech">
-                    [ MENU ]
+                {/* Mobile Controls */}
+                <div className="md:hidden flex items-center gap-4">
+                    <Link
+                        href="/register"
+                        className="px-4 py-2 font-tech font-bold text-black bg-primary rounded-sm hover:bg-white transition-colors text-sm"
+                    >
+                        DEPLOY /// REGISTER
+                    </Link>
+                    <div className="text-primary font-tech">
+                        [ MENU ]
+                    </div>
                 </div>
             </div>
 

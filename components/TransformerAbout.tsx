@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function TransformerAbout() {
     return (
-        <section className="relative py-32 bg-bg-darker overflow-hidden">
+        <section className="relative py-32 bg-transparent overflow-hidden">
             {/* Decorative Grid Background */}
             <div className="absolute inset-0 bg-grid-cyber opacity-10 pointer-events-none" />
 
