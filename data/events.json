@@ -152,20 +152,18 @@
       "id": "mind-spark",
       "name": "MIND SPARK",
       "slug": "mind-spark",
-      "description": "MIND SPARK is a three-round technical event curated by the EEE Department to ignite logical thinking, creativity, and practical understanding of core electrical and electronics concepts.",
-      "longDescription": "MIND SPARK is a three-round technical event curated by the EEE Department to ignite logical thinking, creativity, and practical understanding of core electrical and electronics concepts. The event blends EEE fundamentals with interactive and engaging formats, making it accessible and enjoyable for students from all departments.",
+      "description": "A Technical Team Event – EEE Department. MIND SPARK is a 3-round technical team event designed to ignite logical thinking, creativity, and problem-solving.",
+      "longDescription": "MIND SPARK is a 3-round technical team event designed to ignite logical thinking, creativity, and problem-solving through real-world Electrical & Electronics applications.\nOpen and engaging for students from all departments.\n\nRounds\n1) Tech Tambola (EEE): Application-based concept recognition\n2) Tech Pictionary & Connections: Draw, decode, and link EEE ideas\n3) Basic Problem Solving: Simple, real-world EEE challenges",
       "date": "Feb 9, 2026",
       "venue": "PV Block",
       "startTime": "10:30 AM",
-      "teamSize": "Teams of 2-3 members",
+      "teamSize": "Teams of 2-4 members",
       "entryFee": "Cash Prizes",
       "rules": [
-        "Team Size: 2–3 members",
-        "Eligibility: Open to all departments",
-        "Registration: Pre-registration only (No on-spot registration)",
-        "Total Rounds: 3 (Elimination-based)",
-        "Use of mobile phones or external help is strictly prohibited",
-        "Judges’ decision will be final"
+        "Team Size: 2–4",
+        "Eligibility: All departments",
+        "Registration: Pre-registration only",
+        "Rounds: 3 (Cumulative scoring)"
       ],
       "prize": "Cash Prizes",
       "timeline": [
