@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.5",
+    "clsx": "^2.1.1",
     "emailjs": "^5.0.0",
+    "framer-motion": "^12.27.3",
     "googleapis": "^170.1.0",
+    "lucide-react": "^0.562.0",
     "next": "^14.0.4",
     "nodemailer": "^7.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "resend": "^2.1.0"
+    "react-intersection-observer": "^10.0.2",
+    "resend": "^2.1.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",

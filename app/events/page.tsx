@@ -6,7 +6,7 @@ export default function EventsPage() {
   const events = getEvents()
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 min-h-screen py-20">
+    <div className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-display font-bold text-gold-400 mb-6">

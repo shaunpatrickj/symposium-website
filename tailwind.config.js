@@ -20,10 +20,20 @@ module.exports = {
           800: '#92400e',
           900: '#78350f',
         },
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+          900: '#164e63',
+        },
       },
       fontFamily: {
-        serif: ['Georgia', 'Times New Roman', 'serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        serif: ['Ethnocentric', 'Georgia', 'serif'],
+        display: ['Ethnocentric', 'playfair Display', 'serif'],
+        tech: ['Ethnocentric', 'Chakra Petch', 'sans-serif'],
+        sans: ['Ethnocentric', 'Inter', 'sans-serif'],
+      },
+      letterSpacing: {
+        wider: '0.05em',
       },
     },
   },

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+import TransformerNavbar from '@/components/TransformerNavbar'
 import Footer from '@/components/Footer'
+import GlobalBackground from '@/components/GlobalBackground'
 
 export const metadata: Metadata = {
-  title: 'Technical Symposium 2024',
-  description: 'Join us for an exciting technical symposium featuring paper presentations, technical competitions, and innovation challenges.',
+  title: 'BLITZKRIEG 2K26 | Technical Symposium',
+  description: 'Unleash your technical prowess at the ultimate symposium of R.M.K. Engineering College.',
 }
 
 export default function RootLayout({
@@ -16,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main className="min-h-screen">
+        <div className="scanlines" />
+        <GlobalBackground />
+        <TransformerNavbar />
+        <main className="min-h-screen relative z-10">
           {children}
         </main>
         <Footer />

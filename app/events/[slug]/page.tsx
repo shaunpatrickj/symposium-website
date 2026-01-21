@@ -17,7 +17,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#050505] overflow-hidden text-white font-sans selection:bg-gold-500/30">
+    <div className="relative min-h-screen bg-transparent overflow-hidden text-white font-sans selection:bg-gold-500/30">
       {/* Background Animations */}
       <div className="absolute inset-0 bg-grid-tech opacity-30 pointer-events-none" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -40,7 +40,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
           <h1 className="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-200 mb-6 drop-shadow-lg">
             {event.name}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed whitespace-pre-line">
             {event.description}
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
                 <span className="w-2 h-8 bg-gold-500 mr-4 rounded-full shadow-[0_0_15px_rgba(251,191,36,0.5)]"></span>
                 About
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-line">
                 {event.longDescription}
               </p>
             </section>
@@ -151,6 +151,15 @@ export default function EventPage({ params }: { params: { slug: string } }) {
                       </div>
                     </div>
                   )}
+
+                  {/* Participation Certificate */}
+                  <div className="flex items-center text-gray-300">
+                    <svg className="w-6 h-6 text-gold-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <div>
+                      <p className="text-sm text-gray-500">Certificates</p>
+                      <p className="font-semibold">Provided for all participants</p>
+                    </div>
+                  </div>
 
                   {/* Prize Section in Sidebar */}
                   <div className="flex items-center text-gray-300 pt-4 border-t border-gray-800">

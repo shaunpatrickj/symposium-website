@@ -10,7 +10,7 @@ export default function SuccessPage() {
             Registration Successful!
           </h1>
           <p className="text-xl text-gray-300 mb-6">
-            Thank you for registering for the Technical Symposium 2024.
+            Thank you for registering for the BlitzKrieg_2K26.
           </p>
           <p className="text-lg text-gray-400 mb-8">
             A confirmation email has been sent to your registered email address with all the details.

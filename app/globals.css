@@ -2,67 +2,185 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/ethnocentric');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #0a0a0a;
-  --bg-darker: #050505;
-  --gold: #fbbf24;
-  --gold-dark: #f59e0b;
+  --bg-dark: #050505;
+  --bg-darker: #020202;
+  --primary: #fbbf24;
+  --primary-dark: #f59e0b;
+  --accent: #22d3ee;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Ethnocentric', sans-serif;
   background-color: var(--bg-dark);
   color: #ffffff;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--primary);
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ethnocentric', sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  /* Ethnocentric is naturally bold/heavy */
 }
 
 @layer utilities {
+  .font-tech {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  }
+
   .text-gold {
     color: var(--gold);
   }
-  
-  .bg-gold {
-    background-color: var(--gold);
-  }
-  
-  .border-gold {
-    border-color: var(--gold);
-  }
-  
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+
+  /* Cybertron Shapes */
+  .clip-mech-corned {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%);
   }
 
-  .bg-grid-tech {
-    background-size: 50px 50px;
-    background-image: linear-gradient(to right, rgba(251, 191, 36, 0.05) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(251, 191, 36, 0.05) 1px, transparent 1px);
-    animation: move-grid 20s linear infinite;
+  .clip-mech-panel {
+    clip-path: polygon(20px 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%,
+        0 20px);
   }
 
-  @keyframes move-grid {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
+  .clip-button-mech {
+    clip-path: polygon(10px 0,
+        100% 0,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        0 100%,
+        0 10px);
   }
 
-  .tech-spin {
-    animation: spin 10s linear infinite;
+  /* HUD Grid */
+  .bg-grid-cyber {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
   }
 
-  .tech-spin-reverse {
-    animation: spin 15s linear infinite reverse;
+  /* Scan Lines */
+  .scanlines {
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.2));
+    background-size: 100% 4px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.15;
   }
 
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  .border-glow {
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
   }
+
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
+  .clip-path-slant {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+  }
+
+  /* Animations */
+  @keyframes scan-line {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-scan-line {
+    animation: scan-line 2s ease-in-out infinite;
+  }
+
+  .neon-box {
+    box-shadow: 0 0 5px #fbbf24, 0 0 20px #fbbf24;
+  }
+}
+
+@keyframes system-boot {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+
+  50% {
+    height: 2px;
+    opacity: 1;
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes glitch {
+
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.animate-glitch {
+  animation: glitch 1s linear infinite;
 }

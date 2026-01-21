@@ -45,7 +45,7 @@ SMTP_FROM=your-email@gmail.com
 SMTP_FROM_NAME=Symposium
 
 # Organizer Email (where notifications go)
-ORGANIZER_EMAIL=organizer@example.com
+ORGANIZER_EMAIL=active-email@example.com
 ```
 
 **Important Notes:**
@@ -215,7 +215,7 @@ SMTP_FROM=your-email@gmail.com
 SMTP_FROM_NAME=Symposium
 
 # Application URL
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_URL=https://your-domain.com
 
 # Google Sheets (Optional)
 GOOGLE_SHEETS_SPREADSHEET_ID=your_google_sheet_id
