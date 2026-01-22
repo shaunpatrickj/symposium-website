@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default function SuccessPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 py-20 px-4">
-      <div className="max-w-2xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 flex flex-col items-center justify-center px-4 pt-24">
+      <div className="w-full max-w-2xl text-center">
         <div className="bg-gray-900/50 border-2 border-gold-500 rounded-xl p-12">
           <div className="text-8xl mb-6 text-gold-400">✓</div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gold-400 mb-4">

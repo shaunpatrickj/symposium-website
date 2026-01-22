@@ -30,7 +30,7 @@ module.exports = {
           dark: '#f59e0b',
         },
         accent: '#22d3ee',
-        'bg-dark': '#050505',
+        'bg-dark': '#0A0D4B',
         'bg-darker': '#020202',
       },
       fontFamily: {

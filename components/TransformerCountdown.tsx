@@ -46,7 +46,7 @@ export default function TransformerCountdown() {
     ]
 
     return (
-        <div className="flex gap-4 md:gap-8 justify-center py-8">
+        <div className="grid grid-cols-2 md:flex gap-4 md:gap-8 justify-center py-8 px-4">
             {timeUnits.map((unit, index) => (
                 <div key={unit.label} className="flex flex-col items-center">
                     <div className="relative group">

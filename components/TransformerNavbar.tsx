@@ -79,17 +79,9 @@ export default function TransformerNavbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Controls */}
-                <div className="md:hidden flex items-center gap-4">
-                    <Link
-                        href="/register"
-                        className="px-4 py-2 font-tech font-bold text-black bg-primary rounded-sm hover:bg-white transition-colors text-sm"
-                    >
-                        DEPLOY /// REGISTER
-                    </Link>
-                    <div className="text-primary font-tech">
-                        [ MENU ]
-                    </div>
+                {/* Mobile Controls - Simplified for Bottom Dock */}
+                <div className="md:hidden">
+                    {/* Logo is sufficient, navigation moved to bottom dock */}
                 </div>
             </div>
 

@@ -27,7 +27,7 @@ export default function TransformerHero() {
             </div>
 
             {/* Cinematic Intro Text */}
-            <div className="relative z-10 text-center space-y-8">
+            <div className="relative z-10 text-center space-y-8 pt-24 md:pt-0 pb-20 md:pb-0">
 
 
                 <motion.div
@@ -36,10 +36,10 @@ export default function TransformerHero() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 >
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 tracking-tighter relative z-10">
+                    <h1 className="text-4xl md:text-8xl lg:text-9xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 tracking-tighter relative z-10 leading-tight">
                         BLITZKRIEG&apos;26
                     </h1>
-                    <h1 className="absolute top-0 left-0 w-full text-6xl md:text-8xl lg:text-9xl font-bold font-tech text-primary opacity-20 blur-sm animate-pulse z-0 tracking-tighter">
+                    <h1 className="absolute top-0 left-0 w-full text-4xl md:text-8xl lg:text-9xl font-bold font-tech text-primary opacity-20 blur-sm animate-pulse z-0 tracking-tighter leading-tight">
                         BLITZKRIEG&apos;26
                     </h1>
                     <div className="absolute -inset-10 border border-primary/10 rounded-full animate-spin-slow opacity-20" />
@@ -56,11 +56,20 @@ export default function TransformerHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2 }}
-                    className="font-tech text-xl text-gray-400 tracking-widest uppercase"
+                    className="font-tech text-sm md:text-xl text-gray-400 tracking-widest uppercase px-4"
                 >
-                    <span className="text-primary mr-2">[</span>
-                    National Level Technical Symposium – EEE
-                    <span className="text-primary ml-2">]</span>
+                    <div className="flex flex-col items-center gap-2">
+                        <div>
+                            <span className="text-primary mr-2">[</span>
+                            National Level Technical Symposium
+                            <span className="text-primary ml-2">]</span>
+                        </div>
+                        <div>
+                            <span className="text-primary mr-2">[</span>
+                            Department of Electrical and Electronics Engineering
+                            <span className="text-primary ml-2">]</span>
+                        </div>
+                    </div>
                 </motion.div>
 
                 {/* Countdown Timer */}

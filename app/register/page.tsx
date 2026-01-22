@@ -5,18 +5,18 @@ import RegistrationFormWrapper from '@/components/RegistrationFormWrapper'
 
 function RegisterContent() {
   return (
-    <div className="min-h-screen bg-transparent py-12 px-4">
-      <div className="max-w-2xl mx-auto pt-20">
+    <div className="min-h-screen bg-transparent py-8 md:py-12 px-4">
+      <div className="max-w-2xl mx-auto pt-16 md:pt-20">
         <div className="mb-12 text-center relative">
           <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent -z-10" />
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-2 tracking-wider">
-            <span className="text-primary text-2xl md:text-4xl align-top mr-2">[</span>
-            INITIATE
-            <span className="text-primary mx-2">/</span>
-            REGISTRATION
-            <span className="text-primary text-2xl md:text-4xl align-top ml-2">]</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold text-white mb-4 tracking-wider flex flex-wrap items-center justify-center gap-x-2 gap-y-2">
+            <span className="inline-flex items-center">
+              <span className="text-primary text-xl md:text-4xl align-top mr-1 md:mr-2">[</span>
+              REGISTRATION
+              <span className="text-primary text-xl md:text-4xl align-top ml-1 md:ml-2">]</span>
+            </span>
           </h1>
-          <p className="text-cyan-500 font-mono text-xs md:text-sm tracking-[0.3em] uppercase bg-bg-dark inline-block px-4">
+          <p className="text-cyan-500 font-mono text-[10px] md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase bg-bg-dark inline-block px-4">
             Enter_Candidate_Details
           </p>
         </div>

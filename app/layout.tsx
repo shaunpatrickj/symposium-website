@@ -3,6 +3,7 @@ import './globals.css'
 import TransformerNavbar from '@/components/TransformerNavbar'
 import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
+import MobileDock from '@/components/MobileDock'
 
 export const metadata: Metadata = {
   title: 'BLITZKRIEG 2K26 | Technical Symposium',
@@ -20,10 +21,11 @@ export default function RootLayout({
         <div className="scanlines" />
         <GlobalBackground />
         <TransformerNavbar />
-        <main className="min-h-screen relative z-10">
+        <main className="min-h-screen relative z-10 pb-28 md:pb-0">
           {children}
         </main>
         <Footer />
+        <MobileDock />
       </body>
     </html>
   )
