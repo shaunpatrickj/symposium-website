@@ -21,6 +21,7 @@ interface FormData {
   department: string
   yearOfStudy: string
   selectedEvents: string[]
+  paperPresentationFormFilled?: boolean
 }
 
 interface FormErrors {
@@ -41,6 +42,7 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
     department: '',
     yearOfStudy: '',
     selectedEvents: preSelectedEvent ? [preSelectedEvent] : [],
+    paperPresentationFormFilled: false,
   })
 
   const [errors, setErrors] = useState<FormErrors>({})
@@ -87,6 +89,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
 
     if (formData.selectedEvents.length === 0) {
       newErrors.selectedEvents = 'Please select at least one event'
+    } else if (formData.selectedEvents.includes('paper-presentation') && !formData.paperPresentationFormFilled) {
+      newErrors.selectedEvents = 'For Paper Presentation, you must confirm you have filled the Google Form'
     }
 
     setErrors(newErrors)
@@ -114,7 +118,7 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
       const newSelectedEvents = prev.selectedEvents.includes(eventId)
         ? prev.selectedEvents.filter(id => id !== eventId)
         : [...prev.selectedEvents, eventId]
-      
+
       return {
         ...prev,
         selectedEvents: newSelectedEvents,
@@ -194,9 +198,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.name ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.name ? 'border-red-500' : 'border-gold-500/30'
+            }`}
           placeholder="Enter your full name"
         />
         {errors.name && (
@@ -215,9 +218,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.email ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.email ? 'border-red-500' : 'border-gold-500/30'
+            }`}
           placeholder="your.email@example.com"
         />
         {errors.email && (
@@ -236,9 +238,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.phone ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.phone ? 'border-red-500' : 'border-gold-500/30'
+            }`}
           placeholder="+1234567890"
         />
         {errors.phone && (
@@ -257,9 +258,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="college"
           value={formData.college}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.college ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.college ? 'border-red-500' : 'border-gold-500/30'
+            }`}
           placeholder="Enter your college name"
         />
         {errors.college && (
@@ -278,9 +278,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="department"
           value={formData.department}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.department ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.department ? 'border-red-500' : 'border-gold-500/30'
+            }`}
           placeholder="e.g., Electronics, Computer Science"
         />
         {errors.department && (
@@ -298,9 +297,8 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
           name="yearOfStudy"
           value={formData.yearOfStudy}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${
-            errors.yearOfStudy ? 'border-red-500' : 'border-gold-500/30'
-          }`}
+          className={`w-full px-4 py-3 bg-black/50 border-2 rounded-lg text-white focus:outline-none focus:border-gold-500 transition-all ${errors.yearOfStudy ? 'border-red-500' : 'border-gold-500/30'
+            }`}
         >
           <option value="">Select year</option>
           <option value="1st Year">1st Year</option>
@@ -321,18 +319,46 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
         </label>
         <div className="space-y-3">
           {events.map((event) => (
-            <label
-              key={event.id}
-              className="flex items-center p-4 bg-black/30 border-2 border-gold-500/20 rounded-lg cursor-pointer hover:border-gold-500/50 transition-all"
-            >
-              <input
-                type="checkbox"
-                checked={formData.selectedEvents.includes(event.id)}
-                onChange={() => handleEventToggle(event.id)}
-                className="w-5 h-5 text-gold-500 bg-black border-gold-500 rounded focus:ring-gold-500 focus:ring-2"
-              />
-              <span className="ml-3 text-white font-medium">{event.name}</span>
-            </label>
+            <div key={event.id}>
+              <label
+                className="flex items-center p-4 bg-black/30 border-2 border-gold-500/20 rounded-lg cursor-pointer hover:border-gold-500/50 transition-all"
+              >
+                <input
+                  type="checkbox"
+                  checked={formData.selectedEvents.includes(event.id)}
+                  onChange={() => handleEventToggle(event.id)}
+                  className="w-5 h-5 text-gold-500 bg-black border-gold-500 rounded focus:ring-gold-500 focus:ring-2"
+                />
+                <span className="ml-3 text-white font-medium">{event.name}</span>
+              </label>
+
+              {/* Special requirement for Paper Presentation */}
+              {event.id === 'paper-presentation' && formData.selectedEvents.includes('paper-presentation') && (
+                <div className="ml-4 mt-3 p-4 bg-gold-900/20 border border-gold-500/30 rounded-lg animate-in fade-in slide-in-from-top-2">
+                  <p className="text-gray-300 text-sm mb-3">
+                    <span className="text-gold-400 font-bold">Requirement:</span> You must fill out this additional form for Paper Presentation.
+                  </p>
+                  <label className="flex items-start cursor-pointer hover:opacity-80 transition-opacity">
+                    <input
+                      type="checkbox"
+                      checked={formData.paperPresentationFormFilled || false}
+                      onChange={(e) => setFormData(prev => ({ ...prev, paperPresentationFormFilled: e.target.checked }))}
+                      className="mt-1 w-4 h-4 text-gold-500 bg-black border-gold-500 rounded focus:ring-gold-500 focus:ring-2"
+                    />
+                    <span className="ml-3 text-white text-sm">
+                      I have filled the <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfezmDlFA2y2hkjtTks2QSjrtAWfZ2Ug53oar2BvLMv8yFpog/viewform?usp=publish-editor"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gold-400 underline hover:text-gold-300 font-medium"
+                      >
+                        Google Form
+                      </a>
+                    </span>
+                  </label>
+                </div>
+              )}
+            </div>
           ))}
         </div>
         {errors.selectedEvents && (

@@ -46,16 +46,46 @@ export default function TransformerHero() {
                 </motion.div>
 
                 <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1.0 }}
+                    className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 py-4"
+                >
+                    {/* Left Image: RMK Logo */}
+                    <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                        <img
+                            src="/images/rmk-logo.png"
+                            alt="RMK Engineering College Logo"
+                            className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]"
+                        />
+                    </div>
+
+                    {/* Center Text: College Name */}
+                    <h2 className="text-xl md:text-3xl font-bold font-tech text-cyan-100 tracking-wider text-center drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]">
+                        R.M.K ENGINEERING COLLEGE
+                    </h2>
+
+                    {/* Right Image: 30 Years Logo */}
+                    <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                        <img
+                            src="/images/30-years-logo.png"
+                            alt="30 Years of Excellence Logo"
+                            className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]"
+                        />
+                    </div>
+                </motion.div>
+
+                <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
-                    transition={{ duration: 1, delay: 1 }}
+                    transition={{ duration: 1, delay: 1.2 }}
                     className="h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent w-full max-w-2xl mx-auto"
                 />
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2 }}
+                    transition={{ delay: 1.4 }}
                     className="font-tech text-sm md:text-xl text-gray-400 tracking-widest uppercase px-4"
                 >
                     <div className="flex flex-col items-center gap-2">
@@ -64,10 +94,8 @@ export default function TransformerHero() {
                             National Level Technical Symposium
                             <span className="text-primary ml-2">]</span>
                         </div>
-                        <div>
-                            <span className="text-primary mr-2">[</span>
+                        <div className="text-xs md:text-base text-gray-500">
                             Department of Electrical and Electronics Engineering
-                            <span className="text-primary ml-2">]</span>
                         </div>
                     </div>
                 </motion.div>

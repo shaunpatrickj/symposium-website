@@ -42,7 +42,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><a href="/events/paper-presentation" className="hover:text-gold-400 transition-colors">Paper Presentation</a></li>
                 <li><a href="/events/powerhouse" className="hover:text-gold-400 transition-colors">POWERHOUSE</a></li>
-                <li><a href="/events/electro-quest" className="hover:text-gold-400 transition-colors">Electro Quest</a></li>
+                <li><a href="/events/photon-quest" className="hover:text-gold-400 transition-colors">PhotonQuest</a></li>
               </ul>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><a href="/events/circuit-debugging" className="hover:text-gold-400 transition-colors">Circuit Debugging</a></li>

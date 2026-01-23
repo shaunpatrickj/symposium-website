@@ -75,21 +75,23 @@
       ]
     },
     {
-      "id": "electro-quest",
-      "name": "Electro Quest",
-      "slug": "electro-quest",
-      "description": "An electrifying circuit design and implementation challenge.",
-      "longDescription": "Electro Quest challenges participants to design and implement electronic circuits to solve real-world problems. Participants will receive problem statements and must design, simulate, and implement working circuits. This event tests both theoretical knowledge and practical skills in electronics.",
+      "id": "photon-quest",
+      "name": "PhotonQuest",
+      "slug": "photon-quest",
+      "description": "PhotonQuest is a skill-oriented competitive challenge aimed at enhancing cognitive abilities.",
+      "longDescription": "PhotonQuest is a skill-oriented competitive challenge aimed at enhancing cognitive abilities such as attention to detail, recall, and creative expression. Structured as a team centered competition, the event features a sequence of well designed rounds that require collaboration, analytical thinking, quick responses, and effective coordination. PhotonQuest offers an engaging platform for students to showcase their skills in an unconventional and enjoyable manner.",
       "date": "Feb 9, 2026",
       "venue": "PV Block",
       "startTime": "10:30 AM",
-      "teamSize": "Teams of 2-4 members",
+      "teamSize": "Teams of 2-3 members",
       "entryFee": "Cash Prizes",
       "rules": [
-        "Teams of 2-4 members",
-        "All components will be provided",
-        "Time limit: 3 hours",
-        "Judging based on functionality and design"
+        "Team size 3 - 2",
+        "Scores can be evaluated based on points",
+        "Eligible participants move to final round",
+        "External devices are not permitted",
+        "Follow the instructions given by the organizer",
+        "Don't violate the rules"
       ],
       "prize": "Cash Prizes",
       "timeline": [
