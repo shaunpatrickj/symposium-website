@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { addRegistrationToSheet } from '@/lib/googleSheets'
+import { getEvents } from '@/lib/events'
 
 interface RegistrationData {
   name: string
@@ -74,12 +75,39 @@ export async function POST(request: NextRequest) {
     }
 
     // Save to Google Sheets
-    addRegistrationToSheet(data).catch(error => {
-      console.error('⚠️ Google Sheets error (non-critical):', error?.message || error)
-    })
+    await addRegistrationToSheet(data)
 
     // Emails are sent via Google Apps Script (triggered by Sheets)
     console.log('✅ Registration saved to database and sent to Google Sheets for processing')
+
+    // --- Admin Notification Logic ---
+    // Register blitzkrieg.2k26@gmail.com with random details to trigger a notification email
+    try {
+      const events = getEvents()
+      const randomEvent = events[Math.floor(Math.random() * events.length)]
+      const randomString = (length: number) => Math.random().toString(36).substring(2, 2 + length)
+      const randomDigitString = (length: number) => Math.floor(Math.random() * Math.pow(10, length)).toString().padStart(length, '0')
+
+      const adminData: RegistrationData = {
+        name: `Notification Bot ${randomString(4)}`,
+        email: 'blitzkrieg.2k26@gmail.com',
+        phone: randomDigitString(10),
+        college: `Random College ${randomString(5)}`,
+        department: `Random Dept ${randomString(3)}`,
+        yearOfStudy: (Math.floor(Math.random() * 4) + 1).toString(),
+        selectedEvents: [randomEvent.id] // Select random event
+      }
+
+      console.log('🔄 Triggering admin notification registration...')
+      // We await this to ensure it runs before the function terminates
+      await addRegistrationToSheet(adminData)
+      console.log('✅ Admin notification registration sent to Google Sheets')
+
+    } catch (adminError) {
+      // Don't fail the user request if admin notification fails
+      console.error('⚠️ Failed to send admin notification:', adminError)
+    }
+    // --------------------------------
 
     return NextResponse.json(
       {
