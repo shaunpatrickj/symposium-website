@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Home, Calendar, Map, Zap } from 'lucide-react'
+import { Home, Calendar, Map, Zap, Bus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export default function MobileDock() {
@@ -12,6 +12,7 @@ export default function MobileDock() {
         { name: 'Home', path: '/', icon: Home },
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Map', path: '/map', icon: Map },
+        { name: 'Transport', path: '/transport', icon: Bus },
         { name: 'Register', path: '/register', icon: Zap },
     ]
 

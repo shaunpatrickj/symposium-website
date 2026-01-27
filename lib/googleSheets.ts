@@ -90,14 +90,14 @@ export async function addRegistrationToSheet(data: RegistrationData) {
 
     console.log('✅ Registration added to Google Sheet successfully')
   } catch (error: any) {
-    console.error('⚠️ Google Sheets error (non-critical - registration still successful):')
+    console.error('❌ Google Sheets error (CRITICAL):')
     if (error.message) {
       console.error('Error message:', error.message)
     }
     if (error.code) {
       console.error('Error code:', error.code)
     }
-    // Don't throw - we don't want to fail registration if sheet fails
-    console.log('ℹ️ Tip: Google Sheets is optional. Remove Google Sheets variables from .env.local to disable.')
+    // CRITICAL UPDATE: Throw error so the registration route knows it failed
+    throw error
   }
 }

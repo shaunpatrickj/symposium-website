@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { MessageCircle } from 'lucide-react'
 
 export default function TransformerNavbar() {
     const pathname = usePathname()
@@ -21,6 +22,7 @@ export default function TransformerNavbar() {
         { name: 'HOME', path: '/' },
         { name: 'EVENTS', path: '/events' },
         { name: 'MAP', path: '/map' },
+        { name: 'TRANSPORT', path: '/transport' },
     ]
 
     return (
@@ -69,19 +71,31 @@ export default function TransformerNavbar() {
 
                     <div className="w-[1px] h-6 bg-gray-700 mx-2" />
 
-                    <Link
-                        href="/register"
+                    <a
+                        href="https://chat.whatsapp.com/JxUgN1B1SLO6zSWaLM3r3k"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group relative px-6 py-2 font-tech font-bold text-black bg-primary clip-button-mech hover:bg-white transition-colors"
                     >
                         <span className="relative z-10 flex items-center gap-2">
-                            DEPLOY <span className="text-xs opacity-70">{"/// REGISTER"}</span>
+                            CONTACT <span className="text-xs opacity-70">{"/// US"}</span>
                         </span>
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Controls - Simplified for Bottom Dock */}
                 <div className="md:hidden">
-                    {/* Logo is sufficient, navigation moved to bottom dock */}
+                    <a
+                        href="https://chat.whatsapp.com/JxUgN1B1SLO6zSWaLM3r3k"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative px-4 py-2 bg-primary clip-button-mech hover:bg-white transition-all duration-300 flex items-center gap-2 shadow-[0_0_15px_rgba(251,191,36,0.4)]"
+                    >
+                        <MessageCircle className="w-4 h-4 text-black fill-black/20" />
+                        <span className="font-tech font-bold text-black text-xs tracking-wider">
+                            CONTACT
+                        </span>
+                    </a>
                 </div>
             </div>
 

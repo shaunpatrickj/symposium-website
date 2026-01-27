@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "busNumber": "111",
+        "startingPoint": "Thiruvanmiyur",
+        "route": "Thiruvanmiyur Bus Terminus (Bypass) (6.20) – Adyar Depot (6.30) – Adyar Signal (6.35) – Madhya Kailash (6.37) – Guindy Race Course (6.50) – Nehru Statue (6.52) – Kasi Theatre (6.55) – Ashok Pillar (7.00) – Vadapalani Signal (7.10) – MMDA (7.12) – Koyambedu Roundana (7.15) – College (8.10)."
+    },
+    {
+        "id": 2,
+        "busNumber": "112",
+        "startingPoint": "Tambaram",
+        "route": "Tambaram Yard (6.00) – Selaiyur Bharath College (6.10) – Camp Road Junction (6.15) -Tambaram BT (6.20) – Tambaram Sanitorium (6.25) – Chrompet (6.30) – Pallavaram (6.35) – Meenambakkam (6.40) – Palavanthangal (6.45) – Alandur (6.48) – Guindy Kathipara (6.50) – K.K. Nagar ( 6.58) – Vadapalani Signal (7.10) – Anna Nagar Depot (7.20) – Nallur Tollgate (7.50) – College (8.15)."
+    },
+    {
+        "id": 3,
+        "busNumber": "121",
+        "startingPoint": "Porur",
+        "route": "Iyappan Thangal (6.35) – Porur Signal (6.45) – Valasarawakkam (6.50) – virugambakkam (6.55) – Avichi (6.58) – Natesan Nagar (7.00) – Chinmaya nagar (7.05) – Koyambedu (7.10) – Anna Nagar Depot (7.15) – College (8.10)."
+    },
+    {
+        "id": 4,
+        "busNumber": "131",
+        "startingPoint": "Tiruvallur",
+        "route": "Tiruvallur (6.10) – Kakkalur (6.15) – Ramapuram (6.20) – Sevvaipettai ( 6.25) – Veppampattu ( 6.30) – Thiruninravur (6.35) – Jaya College (6.40) – Pattabiram (6.50) – Hindu College (6.55) – Avadi Bus Terminus (7.00) – Thirumulaivoyal (7.05) – Ambattur Rakki (7.10) – College (8.10)."
+    },
+    {
+        "id": 5,
+        "busNumber": "132",
+        "startingPoint": "Ambattur",
+        "route": "Ambattur TI Cycles (7.00) – Britannia – Korattur (7.10) – Lucas –TVS (7.15) – Senthil Nagar (7.17) – Ambedkar Nagar (7.28) - College (8.10)"
+    },
+    {
+        "id": 6,
+        "busNumber": "135",
+        "startingPoint": "Ambattur Ram Nagar",
+        "route": "Ambathur Rakki (7.10) – Oragadam (7.18) – Pudur (7.20) – Kallikuppam (7.25) – Puzhal Camp (7.35) – College (8.10)."
+    },
+    {
+        "id": 7,
+        "busNumber": "136",
+        "startingPoint": "Pattabiram",
+        "route": "Murugappa Polytechnic (7.05) – Thirumullaivoyal (7.10) – Ambattur Rakki (7.15) – Pudur(7.17) – Kallikuppam (7.20) – Surapet (7.25) – Velammal (7.30) – Kavankarai (7.40) – Red Hills (7.45) – College (8.10)"
+    },
+    {
+        "id": 8,
+        "busNumber": "141",
+        "startingPoint": "T. Nagar",
+        "route": "T.Nagar Panagal Park (6.45) – Pondy Bazaar (6.50) – Vani Mahal (6.52) Vidhyodaya School (6.55) – Vallurvarkottam (7.00) – Streling Road (7.03) – Metha Nagar (7.05) – Anna Arch (7.10) – Roundana (7.12) – K4 Police Station (7.15) – Nathamuni (7.20) – College (8.10)."
+    },
+    {
+        "id": 9,
+        "busNumber": "153",
+        "startingPoint": "Mogappair West",
+        "route": "Mogappair West Depot (7.00) – Mosque (7.05) – Golden Flats (7.10) – Collector Nagar (7.13) – Waves (7.15) – Petrol Bunk (7.17) – Anna Nagar Depot ( 7.19) – Senthil Nagar ( 7.25) – RTO Office (7.28) – College (8.10)."
+    },
+    {
+        "id": 10,
+        "busNumber": "157",
+        "startingPoint": "Thiruverkadu Arch",
+        "route": "Thiruverkadu Arch (6.50) – Maduravoyal (6.55)–Nerkundram( 7.00) –- Thirumangalam Signal (7.05) – Blue Star (7.10) – Shanthi Colony (7.15) – Anna Nagar West Depot (7.20) – College (8.10)."
+    },
+    {
+        "id": 11,
+        "busNumber": "162",
+        "startingPoint": "Mandaveli",
+        "route": "Kaliappa (6.35) – Mylapore Luz (6.40) – Ajantha – Triplicance Post Office (6.45) – Royapettah Hospital (6.45) Tarapore Towers – Pudupet (6.50) – Egmore (6.55) – Kilpauk Garden (7.10) – ESI (7.05) – Ayanavaram (7.07) – I.C.F. (7.10) – Villivakkam (7.12) – Nathamuni (7.15) – College (8.10)"
+    },
+    {
+        "id": 12,
+        "busNumber": "163",
+        "startingPoint": "Purasawalkam",
+        "route": "Kelly’s Signal (6.45) – Abirami Theatre (6.47) – Purasawalkam Tank (6.50) Doveton (6.53) – Bhuvaneswari (6.55) - Otteri (6.58) – Agaram (7.05) – College (8.10)."
+    },
+    {
+        "id": 13,
+        "busNumber": "166",
+        "startingPoint": "Thiru Vi Ka Nagar",
+        "route": "Thiru Vi Ka Nagar (7.05) – Agaram ( (7.10) – Periyar Nagar (7.15) – Kolathur Anna Statue (7.20) – Moogambikai (7.25) – Retteri (7.30) – College (8.10)."
+    },
+    {
+        "id": 14,
+        "busNumber": "172",
+        "startingPoint": "Tollgate",
+        "route": "Tollgate (6.45) – Tondiarpet Bus Depot (6.50) – Maharani (6.55) - Mint (7.00) – College (8.10)."
+    },
+    {
+        "id": 15,
+        "busNumber": "173",
+        "startingPoint": "Kasimedu",
+        "route": "Royapuram Market (6.50) – Tambuchetty (7.05)– Stanley Hospital (7.10) – Basin Bridge (7.15) – EB Bus Stand (7.20) – MR Nagar (7.25) – Sharma Nagar (7.30) – College (8.10)."
+    },
+    {
+        "id": 16,
+        "busNumber": "175",
+        "startingPoint": "Manali Market",
+        "route": "Manali market (7.00) -Mathur (7.05) – Milk Colony FG (7.08) – SG (7.13) – Arul Nagar (7.17) Thapal petty (7.20) – Moolakadai (7.25) – College (8.10)."
+    },
+    {
+        "id": 17,
+        "busNumber": "181",
+        "startingPoint": "Tiruvottiyur",
+        "route": "Rajakadai (6.35) – Kaladipet – Thiruvottiyur Police Station – Ellaiamman Koil (6.45) Theradi – Vellanchetti School – Tiruvottiyur Ajax (6.45) – Ennore Lift Gate (6.50)Jothi Nagar – MFL Corner – College (8.10)."
+    },
+    {
+        "id": 18,
+        "busNumber": "182",
+        "startingPoint": "Manali New Town",
+        "route": "Manali New Town (6.50) – MMDA – Nappalayam (6.55) – Athipattu (7.00)-Minjur (7.10) College (8.10)"
+    },
+    {
+        "id": 19,
+        "busNumber": "191",
+        "startingPoint": "Sunnambukulam",
+        "route": "Arambakkam (7.20) – Ramapuram (7.25) – Elavur (7.35) – IRT (7.40) – Gummidipoondi Bypass (7.45) – College (8.10)."
+    },
+    {
+        "id": 20,
+        "busNumber": "192",
+        "startingPoint": "Uthukottai",
+        "route": "Uthukottai (7.10) – Komakkam Road (7.15) – Tharatchi ( 7.20) – Peranthur (7.22) – Palavakkam (7.25) – Thandalam (7.35) – Periyapalayam (7.40) – Kosavanpettai (7.45) – Arani (7.50) – Agaram ( 7.55) – Panapapakkam (8.00) – College (8.10)."
+    },
+    {
+        "id": 21,
+        "busNumber": "194",
+        "startingPoint": "Thiruvallur- Manavalan Nagar",
+        "route": "Manavalan Nagar (6.35) – Tiruvallur Railway Station (6.40)– Govt.Hospital (6.45) – Tiruvallur Bus Stand (6.48) – Theradi (6.50) – Thamaraipakkam kootroad (7.20) – Periyapalayam (7.40) – Arani (7.50) – College (8.10)"
+    }
+]

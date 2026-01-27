@@ -49,10 +49,10 @@ export default function TransformerHero() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.0 }}
-                    className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 py-4"
+                    className="flex flex-row items-center justify-center gap-2 md:gap-8 py-4 w-full px-2"
                 >
                     {/* Left Image: RMK Logo */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                    <div className="w-12 h-12 xs:w-14 xs:h-14 md:w-20 md:h-20 relative flex-shrink-0">
                         <img
                             src="/images/rmk-logo.png"
                             alt="RMK Engineering College Logo"
@@ -61,12 +61,12 @@ export default function TransformerHero() {
                     </div>
 
                     {/* Center Text: College Name */}
-                    <h2 className="text-xl md:text-3xl font-bold font-tech text-cyan-100 tracking-wider text-center drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]">
+                    <h2 className="text-sm xs:text-base md:text-3xl font-bold font-tech text-cyan-100 tracking-wider text-center drop-shadow-[0_0_5px_rgba(34,211,238,0.5)] flex-1 leading-tight">
                         R.M.K ENGINEERING COLLEGE
                     </h2>
 
                     {/* Right Image: 30 Years Logo */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 relative">
+                    <div className="w-12 h-12 xs:w-14 xs:h-14 md:w-20 md:h-20 relative flex-shrink-0">
                         <img
                             src="/images/30-years-logo.png"
                             alt="30 Years of Excellence Logo"

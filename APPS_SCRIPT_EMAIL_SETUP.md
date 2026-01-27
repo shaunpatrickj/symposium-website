@@ -123,27 +123,59 @@ function processRegistrations() {
  * HELPER: Send the actual email
  */
 function sendEmail(toEmail, name, events) {
-  // Customize your email HTML here
+  // 1. Send Confirmation to Student
   const htmlBody = `
-    <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-      <div style="background: #000; color: #fbbf24; padding: 20px; text-align: center;">
-        <h1 style="margin:0;">BlitzKrieg 2K26</h1>
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+      
+      <!-- Header -->
+      <div style="background: #000; color: #fbbf24; padding: 30px 20px; text-align: center;">
+        <h1 style="margin:0; font-size: 28px; letter-spacing: 1px;">⚡ BlitzKrieg 2K26</h1>
+        <p style="margin: 5px 0 0 0; color: #fff; opacity: 0.9;">Registration Confirmed</p>
       </div>
-      <div style="padding: 20px;">
-        <p>Hi <strong>${name}</strong>,</p>
-        <p>Thanks for registering! We've received your details.</p>
+
+      <!-- Main Content -->
+      <div style="padding: 30px; background: #fff;">
+        <p style="font-size: 16px; color: #333; margin-top: 0;">Hi <strong>${name}</strong>,</p>
+        <p style="color: #4b5563; line-height: 1.5;">Registration successful! We are thrilled to have you join us for the symposium.</p>
         
-        <div style="background: #f3f4f6; padding: 15px; border-left: 5px solid #fbbf24; margin: 20px 0;">
-          <strong>Events Registered:</strong><br/>
-          ${events || "General Entry"}
+        <!-- Events Box -->
+        <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #fbbf24; margin: 25px 0;">
+          <strong style="display: block; margin-bottom: 5px; color: #000;">Registered Events:</strong>
+          <span style="color: #4b5563;">${events || "General Entry"}</span>
         </div>
 
-        <p><strong>Venue:</strong> R.M.K. Engineering College<br/>
-           <strong>Date:</strong> Feb 9, 2026</p>
-        
-        <p>See you there!</p>
-        <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
-        <small style="color: #666;">This is an automated message.</small>
+        <!-- Details Grid -->
+        <div style="background: #111; color: #fbbf24; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+          <p style="margin: 5px 0;"><strong>📅 Date:</strong> 9 February 2026</p>
+          <p style="margin: 5px 0;"><strong>🏢 College:</strong> R.M.K. Engineering College</p>
+          <p style="margin: 5px 0;"><strong>📍 Venue:</strong> PV Block</p>
+          <p style="margin: 5px 0;"><strong>⏰ Time:</strong> 9:00 AM</p>
+        </div>
+
+        <!-- Instructions -->
+        <div style="padding: 10px 0; border-top: 1px solid #e5e7eb;">
+          <h3 style="margin-bottom: 15px; color: #000;">✨ Important Instructions</h3>
+          <ul style="color: #4b5563; padding-left: 20px; line-height: 1.6;">
+            <li>Please carry a valid <strong>Student ID Card</strong>.</li>
+            <li>Arrive at least <strong>30 minutes early</strong>.</li>
+            <li>Lunch will be provided at the venue. 🍱</li>
+          </ul>
+        </div>
+
+        <p style="color: #4b5563; margin-top: 25px; line-height: 1.5;">
+          If you have any queries, feel free to reach out to us.<br/>
+          We look forward to seeing you!
+        </p>
+
+        <p style="margin-top: 30px; font-weight: bold; color: #000;">
+          Regards,<br/>
+          BlitzKrieg Team
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div style="background: #f3f4f6; padding: 15px; text-align: center; font-size: 12px; color: #9ca3af;">
+        <p style="margin: 0;">This is an automated confirmation message.</p>
       </div>
     </div>
   `;
@@ -152,6 +184,21 @@ function sendEmail(toEmail, name, events) {
     htmlBody: htmlBody,
     name: CONFIG.SENDER_NAME
   });
+
+  // 2. Send Notification to Admin (Replaces the "Bot" logic)
+  const adminEmail = "blitzkrieg.2k26@gmail.com";
+  const adminSubject = `🔔 New Registration: ${name}`;
+  const adminBody = `
+    New Student Registered!
+    
+    Name: ${name}
+    Email: ${toEmail}
+    Events: ${events}
+    
+    (Sent via Apps Script Automation)
+  `;
+  
+  GmailApp.sendEmail(adminEmail, adminSubject, adminBody);
 }
 ```
 

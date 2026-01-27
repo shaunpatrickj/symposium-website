@@ -48,6 +48,7 @@ export default function Footer() {
                 <li><a href="/events/circuit-debugging" className="hover:text-gold-400 transition-colors">Circuit Debugging</a></li>
                 <li><a href="/events/mind-spark" className="hover:text-gold-400 transition-colors">MIND SPARK</a></li>
                 <li><a href="/register" className="hover:text-gold-400 transition-colors">Register</a></li>
+                <li><a href="/transport" className="hover:text-gold-400 transition-colors">Transport</a></li>
               </ul>
             </div>
           </div>
