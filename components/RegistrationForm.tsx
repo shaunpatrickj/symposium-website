@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
+const REGISTRATION_CLOSED = true
+
 interface EventOption {
   id: string
   name: string
@@ -137,6 +139,12 @@ export default function RegistrationForm({ events, preSelectedEvent }: Registrat
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitError(null)
+
+    if (REGISTRATION_CLOSED) {
+      setSubmitError('Registration is closed. No new registrations are being accepted at this time.')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
 
     if (!validate()) {
       return
