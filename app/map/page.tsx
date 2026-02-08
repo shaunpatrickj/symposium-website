@@ -2,16 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import TransformerNavbar from '@/components/TransformerNavbar'
-import Footer from '@/components/Footer'
-import GlobalBackground from '@/components/GlobalBackground'
 
 export default function MapPage() {
     return (
-        <main className="min-h-screen bg-bg-dark text-white font-sans selection:bg-primary/30 relative overflow-hidden">
-            <GlobalBackground />
-            <TransformerNavbar />
-
+        <div className="min-h-screen text-white font-sans selection:bg-primary/30 relative overflow-hidden">
             <div className="container mx-auto px-4 py-32 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -61,8 +55,6 @@ export default function MapPage() {
                     </div>
                 </motion.div>
             </div>
-
-            <Footer />
-        </main>
+        </div>
     )
 }
